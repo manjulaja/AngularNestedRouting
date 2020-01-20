@@ -1,16 +1,13 @@
-<ul>
-  <li>
-    <a [routerLink]="'/'" routerLinkActive="active"> Dashboard </a>
-  </li>
-  <li>
-    <a [routerLink]="'/profile'" routerLinkActive="active"> My Profile </a>
-  </li>
-  <li>
-    <a [routerLink]="'/attendance'" routerLinkActive="active"> My Attendance </a>
-  </li>
-  <li>
-    <a [routerLink]="'/leaves'" routerLinkActive="active"> My leaves </a>
-  </li>
-</ul>
-
-  <router-outlet></router-outlet>
+<div class="card">
+  <div class="card-body">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" [routerLink]="'/dashboard'" routerLinkActive="active"> Dashboard </a>
+      <a class="navbar-brand" [routerLink]="'/profile'" routerLinkActive="active"> My Profile </a>
+      <a class="navbar-brand" [routerLink]="'/attendance'" routerLinkActive="active"> My Attendance </a>
+      <a class="navbar-brand" [routerLink]="'/leaves'" routerLinkActive="active"> My leaves </a>
+    </nav>
+    <p class="card-text">
+      <router-outlet></router-outlet>
+    </p>
+  </div>
+</div>
